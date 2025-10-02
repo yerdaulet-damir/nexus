@@ -1,0 +1,23 @@
+{
+  "name": "NU Nexus Club - Innovation Hub of Central Asia",
+  "short_name": "NU Nexus",
+  "description": "Leading entrepreneurship community at Nazarbayev University connecting brilliant minds with mentors and investors",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#0058CC",
+  "background_color": "#0058CC",
+  "display": "standalone",
+  "start_url": "/",
+  "scope": "/",
+  "orientation": "portrait-primary"
+}
