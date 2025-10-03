@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import GoogleAnalytics from "./components/GoogleAnalytics";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://nunexusclub.com'),
@@ -143,9 +144,10 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="antialiased">
-        {children}
-      </body>
+              <body className="antialiased">
+                <GoogleAnalytics />
+                {children}
+              </body>
     </html>
   );
 }
