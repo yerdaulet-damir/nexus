@@ -30,6 +30,8 @@ export default function Home() {
             fill
             className="object-cover"
             priority
+            quality={85}
+            sizes="100vw"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-nexus-blue/80 via-nexus-blue/40 to-transparent" />
           
@@ -65,6 +67,8 @@ export default function Home() {
             alt=""
             fill
             className="object-contain object-right-bottom"
+            loading="lazy"
+            quality={75}
           />
         </div>
         
@@ -114,6 +118,8 @@ export default function Home() {
             alt=""
             fill
             className="object-contain object-right-top"
+            loading="lazy"
+            quality={70}
           />
         </div>
         
@@ -140,6 +146,8 @@ export default function Home() {
             alt=""
             fill
             className="object-contain object-right-bottom"
+            loading="lazy"
+            quality={70}
           />
         </div>
         

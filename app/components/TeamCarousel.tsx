@@ -37,6 +37,9 @@ export default function TeamCarousel() {
                   alt={member.name}
                   fill
                   className="object-cover"
+                  quality={80}
+                  sizes="(max-width: 768px) 280px, 320px"
+                  loading="lazy"
                 />
               </div>
               <div className="bg-nexus-blue text-white p-6 flex-1 flex items-center">
