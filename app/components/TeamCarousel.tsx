@@ -18,48 +18,48 @@ export default function TeamCarousel() {
   };
 
   return (
-    <div className="relative">
+    <div className="relative px-4 lg:px-0">
       <div
         ref={scrollRef}
-        className="flex gap-6 overflow-x-auto scrollbar-hide pb-4 items-stretch"
+        className="flex gap-4 lg:gap-6 overflow-x-auto scrollbar-hide pb-4"
         style={{ scrollSnapType: "x mandatory" }}
       >
         {teamMembers.map((member, index) => (
           <div
             key={index}
-            className="flex-shrink-0 w-[280px] lg:w-[320px] flex"
+            className="flex-shrink-0 w-[240px] sm:w-[280px] lg:w-[320px]"
             style={{ scrollSnapAlign: "start" }}
           >
-            <div className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow w-full flex flex-col">
-              <div className="relative h-[300px] bg-gray-200 flex-shrink-0 aspect-[4/3]">
+            <div className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow h-full flex flex-col">
+              <div className="relative h-[280px] sm:h-[300px] lg:h-[320px] bg-gray-200 flex-shrink-0">
                 <Image
                   src={member.image}
                   alt={`${member.name} - ${member.role} at NU Nexus Club`}
                   fill
                   className="object-cover"
                   quality={75}
-                  sizes="(max-width: 768px) 280px, 320px"
+                  sizes="(max-width: 640px) 240px, (max-width: 1024px) 280px, 320px"
                   loading="lazy"
                   decoding="async"
                 />
               </div>
-              <div className="bg-nexus-blue text-white p-6 flex-1 flex items-center">
+              <div className="bg-nexus-blue text-white p-4 lg:p-6 flex-1 flex items-center min-h-[80px]">
                 <div className="flex items-center justify-between w-full">
-                  <div className="flex-1">
-                    <h3 className="font-bold text-lg mb-1">{member.name}</h3>
-                    <p className="text-sm opacity-90 italic">{member.role}</p>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="font-bold text-base lg:text-lg mb-1 truncate">{member.name}</h3>
+                    <p className="text-xs lg:text-sm opacity-90 italic truncate">{member.role}</p>
                   </div>
-                  <div className="flex gap-2">
+                  <div className="flex gap-2 flex-shrink-0 ml-2">
                     {member.instagram && (
                       <a
                         href={member.instagram}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="w-8 h-8 rounded-full border border-white/40 flex items-center justify-center hover:bg-white/20 transition"
+                        className="w-7 h-7 lg:w-8 lg:h-8 rounded-full border border-white/40 flex items-center justify-center hover:bg-white/20 transition"
                         aria-label="Instagram"
                       >
                         <svg
-                          className="w-4 h-4"
+                          className="w-3 h-3 lg:w-4 lg:h-4"
                           fill="currentColor"
                           viewBox="0 0 24 24"
                         >
@@ -67,16 +67,16 @@ export default function TeamCarousel() {
                         </svg>
                       </a>
                     )}
-                    {member.linkedin && (
+                    {member.linkedin && member.linkedin !== "#" && (
                       <a
                         href={member.linkedin}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="w-8 h-8 rounded-full border border-white/40 flex items-center justify-center hover:bg-white/20 transition"
+                        className="w-7 h-7 lg:w-8 lg:h-8 rounded-full border border-white/40 flex items-center justify-center hover:bg-white/20 transition"
                         aria-label="LinkedIn"
                       >
                         <svg
-                          className="w-4 h-4"
+                          className="w-3 h-3 lg:w-4 lg:h-4"
                           fill="currentColor"
                           viewBox="0 0 24 24"
                         >
