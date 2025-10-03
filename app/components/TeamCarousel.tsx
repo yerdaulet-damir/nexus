@@ -31,15 +31,16 @@ export default function TeamCarousel() {
             style={{ scrollSnapAlign: "start" }}
           >
             <div className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow w-full flex flex-col">
-              <div className="relative h-[300px] bg-gray-200 flex-shrink-0">
+              <div className="relative h-[300px] bg-gray-200 flex-shrink-0 aspect-[4/3]">
                 <Image
                   src={member.image}
-                  alt={member.name}
+                  alt={`${member.name} - ${member.role} at NU Nexus Club`}
                   fill
                   className="object-cover"
-                  quality={80}
+                  quality={75}
                   sizes="(max-width: 768px) 280px, 320px"
                   loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div className="bg-nexus-blue text-white p-6 flex-1 flex items-center">

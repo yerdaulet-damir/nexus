@@ -6,9 +6,15 @@
   body {
     @apply bg-white text-black;
   }
+  
+  /* Оптимизация шрифтов */
+  html {
+    font-display: swap;
+    scroll-behavior: smooth;
+  }
 }
 
-/* Custom scrollbar for horizontal scrolling */
+/* Custom scrollbar для горизонтальной прокрутки */
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -18,8 +24,31 @@
   display: none;
 }
 
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
+/* Aspect ratio для предотвращения CLS */
+.aspect-video {
+  aspect-ratio: 16 / 9;
 }
 
+.aspect-square {
+  aspect-ratio: 1 / 1;
+}
+
+/* Оптимизация изображений - предотвращение CLS */
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+/* Улучшенная анимация изображений */
+@media (prefers-reduced-motion: no-preference) {
+  img {
+    transition: opacity 0.3s ease-in-out;
+  }
+}
+
+/* Оптимизация для низкого качества связи */
+@media (prefers-reduced-data: reduce) {
+  img {
+    content-visibility: auto;
+  }
+}

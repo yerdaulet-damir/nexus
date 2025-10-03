@@ -57,4 +57,3 @@ export const teamMembers: TeamMember[] = [
     instagram: "https://www.instagram.com/nunexusclub/",
   },
 ];
-

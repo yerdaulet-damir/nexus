@@ -93,12 +93,25 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Favicons */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="theme-color" content="#0058CC" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="format-detection" content="telephone=no" />
+        
+        {/* Preconnect для быстрой загрузки */}
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        
+        {/* Preload критичного hero изображения (LCP) */}
+        <link
+          rel="preload"
+          as="image"
+          href="/hero.png"
+          type="image/png"
+          fetchPriority="high"
+        />
         
         {/* Structured Data for Rich Results */}
         <script
